@@ -6,11 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     #HitterzVolleyball {
-      background-color: rgb(211, 140, 59);
-      color: black;
-      padding: 40px;
-      text-align: center;
+      /* Sstyles with background */
+      background-image: url('https://scontent.fakl1-4.fna.fbcdn.net/v/t39.30808-6/480497834_928421532780018_6503814943988929212_n.png?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=50iiU4sDs1cQ7kNvwG9gZxu&_nc_oc=AdmJddW68EWvtnCLWDGipcAOeQZO7ZsUPY8FieaJbmt17qhMzGy0gzsKxmwB5hiC9eFW50-3zveW_3VRxhUO_NYq&_nc_zt=23&_nc_ht=scontent.fakl1-4.fna&_nc_gid=UMYaUOx1fGtoLli2n2LjSw&oh=00_AfS_tUZC8k7uI4PDQyWcbz4gV1QZh3pQtIwVUOqalFratg&oe=6890F04E');
+      background-size: cover;       /* entire thing gets covered so none of the image gets cut off */
+      background-position: center;  /* image becomes more centered */
+      background-repeat: no-repeat;
+      color: white;                 /* text is more readable on header */
+      height: 550px;                /* height of header box */
+      display: flex;                /*text is vertical (header)*/
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* text is more readable */
     }
+
+
+    body {
+      background-color: #faf0ca;
+      padding: 0;
+    }
+
 
     table {
       font-size: 18px;
@@ -20,19 +37,23 @@
       text-align: center;
     }
 
+
     th {
       font-weight: bold;
       border-bottom: 1px dashed black;
     }
 
+
     td {
       vertical-align: top;
     }
+
 
     nav {
       text-align: center;
       margin: 20px 0;
     }
+
 
     nav a {
       margin: 0 10px;
@@ -40,11 +61,59 @@
       font-weight: bold;
       color: #333;
     }
-
-    .placement-box {
-      text-align: center;
-      margin-top: 50px;
+   
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;  /* space between images */
+      padding: 20px;
     }
+
+
+    .flex-item {
+      flex: 1 1 calc((100% - 20px) / 3);  /* 3 columns */
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+    }
+
+
+    .flex-item img {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* screens for two columns - medium sized */
+    @media (max-width: 900px) {
+      .flex-item {
+        flex: 1 1 calc((100% - 10px) / 2);  /* 2 columns with 10px gap */
+      }
+
+
+      .flex-item img {
+        height: 250px;
+      }
+    }
+
+
+    /* screens for small sized screens */
+    @media (max-width: 600px) {
+      .flex-item {
+        flex: 1 1 100%;  /* width of screen fixed */
+      }
+
+
+      .flex-item img {
+        height: 220px;
+      }
+    }
+
 
     footer {
       text-align: center;
@@ -55,9 +124,9 @@
   </style>
 </head>
 
+
 <body>
 
-  <h1 id="HitterzVolleyball">HitterzVolleyball</h1>
 
   <nav>
     <a href="about.html">About Us</a>
@@ -68,9 +137,14 @@
     <a href="clips.html">Clips</a>
   </nav>
 
+
+  <h1 id="HitterzVolleyball">HitterzVolleyball</h1>
+
+
   <p>
     Hitterz Sports Club Incorporated was established in 2018 by a group of friends driven by a shared passion for sports.
   </p>
+
 
   <h1>Looking to play for volleyball team?</h1>
   <h2>Hitterz volleyball ensures that there's a team suited for your abilities</h2>
@@ -81,9 +155,30 @@
   <h2>Development Programme</h2>
   <h2>We are located in the Heart of Auckland</h2>
 
-  <div style="text-align: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz4dOSIx0GYk6c2j6_y9Yr7yYsej9SlRjjrAuGxgCHUp4RBJXMrVvpH8a62xwDHiXhwLI&usqp=CAU" alt="volleyball">
+
+  <div class="flex-container">
+    <div class="flex-item">
+      <img src="" alt="">
+    </div>
+    <div class="flex-item">
+      <img src="" alt="Image 2">
+    </div>
+    <div class="flex-item">
+      <img src="" alt="Image 3">
+    </div>
+    <div class="flex-item">
+      <img src="" alt="Image 4">
+    </div>
+    <div class="flex-item">
+      <img src="" alt="Image 5">
+    </div>
+    <div class="flex-item">
+      <img src="" alt="Image 6">
+    </div>
   </div>
+
+
+
 
   <div style="text-align: center;">
     <table id="Table">
@@ -108,28 +203,32 @@
     </table>
   </div>
 
-  <div style="text-align: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5kSdoIHwFdrOVe8_AsS-OI5TzZ68X1WNQpQ&s">
-  </div>
+
+
 
   <h1>UPCOMING GAMES AND TOURNAMENTS TO LOOK OUT FOR</h1>
   <h2>• Pistang Pinay games in Christchurch October 27–31 (Labour Weekend)</h2>
   <h2>• Men's Team @ Northern Zone</h2>
+
 
   <div class="placement-box">
     <h2>Gallery</h2>
     <p>volleyball</p>
   </div>
 
+
   <h1>Thank you to our sponsors</h1>
   <h2>Right Education</h2>
   <h2>Mon's Charity</h2>
   <h2>And to our patrons, who support our club to the best of their ability every year</h2>
 
+
   <footer>
     <p>&copy; 2025 Hitterz Volleyball Club Auckland Incorporated. All rights reserved.</p>
   </footer>
 
+
 </body>
 </html>
-    
+
+
